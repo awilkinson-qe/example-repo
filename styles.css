@@ -1,0 +1,75 @@
+/* styles.css */
+/* Starter CSS boilerplate was created with help from GitHub Copilot, then reviewed and edited for this project. */
+/* I used VS Code IntelliSense and ChatGPT for help with tasks, debugging, and clearer comments. */
+
+/* Global CSS variables used across the file */
+:root {
+  --primary-color: #007bff;
+  --base-font-size: 16px;
+  --line-height: 1.5;
+  --base-spacing: 8px;
+  --border-radius: 4px;
+}
+
+/* Reset and base styles. Remove default spacing so layout is consistent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base text size and smooth scroll */
+html {
+  font-size: var(--base-font-size);
+  scroll-behavior: smooth;
+}
+
+/* Default page font and colors */
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  line-height: var(--line-height);
+  color: #333;
+  background-color: #fff;
+}
+
+/* Link color and no underline by default */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Underline links on hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form elements */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: calc(var(--base-spacing) * 1.5) calc(var(--base-spacing) * 3);
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Utility class used in this project */
+.mt-2 {
+  margin-top: calc(var(--base-spacing) * 2);
+}

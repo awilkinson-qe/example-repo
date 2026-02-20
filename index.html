@@ -1,0 +1,152 @@
+<!-- index.html -->
+<!-- I used GitHub Copilot, VS Code IntelliSense, and ChatGPT for help with tasks, debugging, and clearer comments. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your page description here" />
+    <title>eCommerce Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Task 6: Cookie consent banner -->
+    <div
+      id="cookie-consent-banner"
+      class="alert alert-secondary mb-0 rounded-0"
+      style="display: none"
+      role="alert"
+    >
+      <!-- Banner layout -->
+      <div
+        class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2"
+      >
+        <!-- Banner text -->
+        <span
+          >We use cookies to give you the best online experience. Strictly
+          necessary cookies are on by default. Additional cookies are off by
+          default.</span
+        >
+        <!-- Action buttons -->
+        <div class="d-flex gap-2">
+          <button
+            id="accept-cookies"
+            class="btn btn-sm btn-primary"
+            type="button"
+          >
+            Accept Cookies
+          </button>
+          <button
+            id="decline-cookies"
+            class="btn btn-sm btn-outline-secondary"
+            type="button"
+          >
+            Decline Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 1: Main page area -->
+    <main class="container my-5">
+      <h1 class="mb-4">Welcome to the eCommerce Project</h1>
+
+      <!-- Task 6 + Task 8: Greeting area -->
+      <div
+        class="mb-4 d-flex flex-column flex-sm-row align-items-sm-center gap-2"
+      >
+        <div id="greetingMessage" class="fw-semibold text-primary"></div>
+        <button
+          id="deleteUsernameCookieBtn"
+          class="btn btn-sm btn-outline-secondary d-none"
+          type="button"
+        >
+          Delete saved name cookie
+        </button>
+      </div>
+
+      <!-- Task 4: Font dropdown (saved for this tab only) -->
+      <div class="mb-4">
+        <label for="fontSelect" class="form-label">Font (session only)</label>
+        <select id="fontSelect" class="form-select" style="max-width: 300px">
+          <option value="">Default</option>
+          <option value="Arial, sans-serif">Arial (Sans)</option>
+          <option value="'Times New Roman', Times, serif">
+            Times New Roman (Serif)
+          </option>
+          <option value="'Courier New', Courier, monospace">
+            Courier New (Monospace)
+          </option>
+          <option value="'Brush Script MT', cursive">
+            Brush Script (Cursive)
+          </option>
+          <option value="Papyrus, fantasy">Papyrus (Fantasy)</option>
+          <option
+            value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+          >
+            Impact (Display)
+          </option>
+        </select>
+      </div>
+
+      <!-- Task 5: Cache message (shown by JavaScript) -->
+      <div
+        id="cacheStatus"
+        class="alert alert-info d-none"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <div class="row">
+        <!-- Task 2: Product catalog -->
+        <section class="col-md-7">
+          <h2 class="h4 mb-3">Product Catalog</h2>
+          <div id="productCatalog" class="row g-3">
+            <!-- Product cards are added here by JavaScript -->
+          </div>
+        </section>
+
+        <!-- Task 3: Shopping cart -->
+        <section class="col-md-5">
+          <h2 class="h4 mb-3">Shopping Cart</h2>
+
+          <!-- Cart items list -->
+          <ul id="cartItems" class="list-group mb-3"></ul>
+
+          <!-- Total price row -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <strong>Total:</strong>
+            <span id="totalPrice">£0.00</span>
+          </div>
+
+          <!-- Task 3: Clear cart button -->
+          <button id="clearCartBtn" class="btn btn-danger w-100">
+            Clear Cart
+          </button>
+          <!-- Task 7: Reset cart and saved settings -->
+          <button
+            id="resetPreferencesBtn"
+            class="btn btn-outline-secondary w-100 mt-2"
+          >
+            Reset Cart &amp; Preferences
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <!-- Load JavaScript at the end so all IDs exist first -->
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
